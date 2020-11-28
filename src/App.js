@@ -1,23 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from './Component/Home';
+import Add from './Component/Add';
+import Edit from './Component/Edit';
 
-function App() {
+import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mt-5">
+      
+      <Router>
+        <div className="card">
+          <div className="card-header">
+            <NavLink className="btn btn-primary btn-sm" to="/" exact>Home</NavLink>&nbsp;&nbsp;
+         <NavLink className="btn btn-primary btn-sm" to="/add-std">Add</NavLink> 
+          </div>
+          <div className="card-body">
+            <Switch>
+              <Route path="/" component={Home} exact />
+              <Route path="/add-std" component={Add} />
+              <Route path="/edit-std/:id" component={Edit} />
+            </Switch>
+          </div>
+        </div>
+
+
+      </Router>
     </div>
   );
 }

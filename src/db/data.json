@@ -1,0 +1,25 @@
+{
+  "students": [
+    {
+      "std_name": "Kiran",
+      "std_roll_no": "IU120",
+      "std_result": "Fail",
+      "std_percent": "28",
+      "id": 1
+    },
+    {
+      "std_name": "Radha",
+      "std_roll_no": "IQWe12",
+      "std_result": "Pass",
+      "std_percent": 79,
+      "id": 3
+    },
+    {
+      "std_name": "Jyothi",
+      "std_roll_no": "IOU098",
+      "std_result": "Pass",
+      "std_percent": "89",
+      "id": 4
+    }
+  ]
+}
